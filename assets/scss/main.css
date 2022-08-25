@@ -451,6 +451,10 @@ a:hover {
   font-family: 'Poppins', sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 body,
 main,
 .bg-grid {
@@ -592,10 +596,16 @@ main,
   position: absolute;
   top: 50%;
   right: 270px;
-  border-bottom: 1px solid #000;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  padding-right: 30px;
+  -webkit-animation-name: rider;
+          animation-name: rider;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .girl-img {
@@ -604,6 +614,14 @@ main,
   left: 270px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  -webkit-animation-name: floating;
+          animation-name: floating;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .forgot-password {
@@ -646,5 +664,93 @@ main,
   border: 1px solid #E48700;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+@-webkit-keyframes floating {
+  0% {
+    top: 45%;
+  }
+  25% {
+    top: 50%;
+  }
+  50% {
+    top: 55%;
+  }
+  75% {
+    top: 50%;
+  }
+  100% {
+    top: 45%;
+  }
+}
+
+@keyframes floating {
+  0% {
+    top: 45%;
+  }
+  25% {
+    top: 50%;
+  }
+  50% {
+    top: 55%;
+  }
+  75% {
+    top: 50%;
+  }
+  100% {
+    top: 45%;
+  }
+}
+
+@-webkit-keyframes rider {
+  0% {
+    right: 0;
+  }
+  25% {
+    right: 55%;
+  }
+  49% {
+    -webkit-transform: scaleX(1) translateY(-50%);
+            transform: scaleX(1) translateY(-50%);
+  }
+  50% {
+    right: 110%;
+    -webkit-transform: scaleX(-1) translateY(-50%);
+            transform: scaleX(-1) translateY(-50%);
+  }
+  75% {
+    right: 55%;
+  }
+  100% {
+    right: 0;
+    -webkit-transform: scaleX(-1) translateY(-50%);
+            transform: scaleX(-1) translateY(-50%);
+  }
+}
+
+@keyframes rider {
+  0% {
+    right: 0;
+  }
+  25% {
+    right: 55%;
+  }
+  49% {
+    -webkit-transform: scaleX(1) translateY(-50%);
+            transform: scaleX(1) translateY(-50%);
+  }
+  50% {
+    right: 110%;
+    -webkit-transform: scaleX(-1) translateY(-50%);
+            transform: scaleX(-1) translateY(-50%);
+  }
+  75% {
+    right: 55%;
+  }
+  100% {
+    right: 0;
+    -webkit-transform: scaleX(-1) translateY(-50%);
+            transform: scaleX(-1) translateY(-50%);
+  }
 }
 /*# sourceMappingURL=main.css.map */

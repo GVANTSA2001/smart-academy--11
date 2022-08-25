@@ -5,6 +5,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 body,
 main,
 .bg-grid {
@@ -148,9 +152,11 @@ main,
     position: absolute;
     top: 50%;
     right: 270px;
-    border-bottom: 1px solid #000;
     transform: translateY(-50%);
-    padding-right: 30px;
+    animation-name: rider;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .girl-img {
@@ -158,6 +164,10 @@ main,
     top: 50%;
     left: 270px;
     transform: translateY(-50%);
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 
 }
 
@@ -199,5 +209,56 @@ main,
         transition: 0.4s;
         border: 1px solid #E48700;
         box-shadow: none;
+    }
+}
+
+@keyframes floating {
+    0% {
+        top: 45%;
+    }
+
+    25% {
+        top: 50%;
+    }
+
+    50% {
+        top: 55%;
+    }
+
+    75% {
+        top: 50%;
+    }
+
+    100% {
+        top: 45%;
+    }
+}
+
+@keyframes rider {
+    0% {
+        right: 0;
+    }
+
+    25% {
+        right: 55%;
+    }
+
+    49% {
+        transform: scaleX(1) translateY(-50%);
+    }
+
+    50% {
+        right: 110%;
+        transform: scaleX(-1) translateY(-50%);
+    }
+
+    75% {
+        right: 55%;
+    }
+
+    100% {
+        right: 0;
+        transform: scaleX(-1) translateY(-50%);
+
     }
 }
