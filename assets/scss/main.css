@@ -518,12 +518,13 @@ main,
 }
 
 .login-box .sing-up-link a {
-  color: #B87514;
+  color: #E48700;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
 }
 
 .login-box .sing-up-link a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid #E48700;
 }
 
 .login-box h1 {
@@ -613,12 +614,13 @@ main,
 .forgot-password a {
   font-size: 13px;
   line-height: 20px;
-  color: #AD3113;
+  color: #E48700;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
 }
 
 .forgot-password a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid #E48700;
 }
 
 .sign-in-button {
